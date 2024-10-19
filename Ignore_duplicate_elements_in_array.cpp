@@ -22,7 +22,6 @@ int main()
         }
 
         // If it's not a duplicate than add it to uniqueArr
-
         if (!isDuplicate) // it means If isDuplicate is false
         {
             uniqueArr[uniqueCount++] = arr[i];

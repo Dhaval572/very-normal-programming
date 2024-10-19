@@ -9,16 +9,16 @@ void decimalToBinary(int n)
     int i = 0;
 
     // Loop will running until n is not equal to 0
-    while(n)
+    while (n)
     {
-        rem = n % 2; // Provides remainder
-        n = n / 2;   
-        arr[i] = rem;
+        rem = n % 2;  // Provides remainder
+        n = n / 2;    // Updating the value of n
+        arr[i] = rem; // Stores remainder to arr
         i++;
     }
 
     // For print reminder from end
-    for(int j = i - 1; j >= 0; j--)
+    for (int j = i - 1; j >= 0; j--)
     {
         cout << arr[j];
     }

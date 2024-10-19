@@ -21,7 +21,7 @@ int main()
     cout << "Enter the number: ";
     cin >> n;
 
-    cout << "Number of  digit of (" << n << ") is: ";
+    cout << "Number of digit of (" << n << ") is: ";
     digitCount(n);
     return 0;
 }

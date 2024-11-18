@@ -3,6 +3,7 @@
 using namespace std;
 
 template <class T>
+
 T Product(T a, T b) // T used as data type template
 {
 	return a * b;
@@ -22,26 +23,30 @@ int main()
 	cout << "Product of int: " << Product(a, b) << endl;
 	cout << "Product of float: " << Product(x, y) << endl;
 	cout << "Product of double: " << Product(p, q) << endl;
+
 	return 0;
 }
 
 /*
-
 Syntax:
 
-template<class template_name> (Note: You can use typename instead of class in templates)
+	template<class template_name> (Note: You can use typename instead of class in templates)
 
 Use of templates:
 
-1. Write functions that can operate on any data type it means you don't need to create different functions for each data type.
+	1).	Write functions that can operate on any data type it means you don't need to create different functions for each data type.
 
-Example:
-int Product(int a, int b);
-float Product(float a, float b);
-double Product(double a, double b);
+		Example:
+		int Product(int a, int b);
+		float Product(float a, float b);
+		double Product(double a, double b);
 
-2. This is also use in class(user defined data type)
+	2).	This is also use in class(user defined data type)
 
-3. Avoid multiple versions of the same function for different types
+	3).	Avoid multiple versions of the same function for different types
+
+So, this was basic information about templates.
+
+So, i hope you understand!
 
 */

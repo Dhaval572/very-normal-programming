@@ -1,7 +1,7 @@
 // Writing the rhyme
 #include <iostream>
 #include <windows.h>
-using namespace std; 
+using namespace std;
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     for(int i = 0; i < s.length(); i++)
     {
         cout << s.at(i);
-        Sleep(100);
+        Sleep(100); // delay in milisecond   
     }
     return 0;
 }

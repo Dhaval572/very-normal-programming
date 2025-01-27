@@ -8,7 +8,7 @@ inline void typingCode(const string &s)
     for (char c : s)
     {
         cout << c;
-        Sleep(100); // Typing speed
+        Sleep(50); // Typing speed
     }
 }
 

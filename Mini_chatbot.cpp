@@ -4,27 +4,25 @@
 #include <string>
 using namespace std;
 
+void autoTyping(string str, int delay)
+{
+    for(char c : str)
+    {
+        cout << c;
+        Sleep(delay);
+    }
+}
+
 int main()
 {
     string s = {"What is your name? \n"};
-
-    for(char c : s)
-    {
-        cout << c;
-        Sleep(100);
-    }
+    autoTyping(s, 100);
 
     string you;
     cin >> you;
 
-    s.clear();
     s = "Hello, "+ you +"! How are you?\n";
-
-    for(char c : s)
-    {
-        cout << c;
-        Sleep(100);
-    }
+    autoTyping(s, 100);
 
     cin.ignore(); // Clear previous input
     getline(cin, you); // Take input
@@ -36,11 +34,7 @@ int main()
     else 
         s = "Ok bye! Have a good day";
 
-    for (char c : s)
-    {
-        cout << c;
-        Sleep(150);
-    }
+    autoTyping(s, 150);
 
     return 0;
 }

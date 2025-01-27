@@ -8,7 +8,7 @@ inline void typingCode(const string &s)
     for (char c : s)
     {
         cout << c;
-        Sleep(50); 
+        Sleep(50);
     }
 }
 
@@ -75,18 +75,25 @@ int main()
 
     // Asking user if they want to close the program
     char ch;
-    cout << "Do you want to close the code? (y / n): ";
-    cin >> ch;
+    while (true)
+    {
+        cout << "Do you want to close the code? (y / n): ";
+        cin >> ch;
 
-    if (ch == 'y' || ch == 'Y')
-    {
-        cout << "Closing the program...\n";
-        Sleep(999);
-        return 0; // Terminates the program
-    }
-    else
-    {
-        cout << "Program will continue running.\n";
+        if (ch == 'y' || ch == 'Y')
+        {
+            cout << "Closing the program...\n";
+            Sleep(999);
+            return 0;
+        }
+        else if (ch == 'n' || ch == 'N')
+        {
+            cout << "Program will continue running.\n";
+        }
+        else
+        {
+            cout << "Invalid input. Please press 'y' to exit or 'n' to continue.\n";
+        }
     }
 
     return 0;

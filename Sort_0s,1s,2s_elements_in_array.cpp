@@ -60,12 +60,12 @@ int main()
 
     It decides what action to take based on whether the element is 0, 1, or 2.
 
-|+--------+------------------------------------------------------------+ 
-| Pointer | Purpose                                                    | 
-|+--------+------------------------------------------------------------+ 
-|  low    | Marks boundary for `0s`, moves right when a `0` is placed. | 
-|  mid    | Main pointer, processes each element and moves forward.    | 
-|  high   | Marks boundary for `2s`, moves left when a `2` is placed.  | 
-|+--------+------------------------------------------------------------+ 
++---------+-------------------------------------------------------------+ 
+| Pointer | Purpose                                                     | 
++---------+-------------------------------------------------------------+ 
+|  low    | Marks boundary for `0s`, moves right when a `0` is placed.  | 
+|  mid    | Main pointer, processes each element and moves forward.     | 
+|  high   | Marks boundary for `2s`, moves left when a `2` is placed.   | 
++---------+-------------------------------------------------------------+ 
 
 */

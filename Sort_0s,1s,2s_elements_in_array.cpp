@@ -16,13 +16,13 @@ void sort012(int arr[], int size)
             mid++;
         }
 
-        // Set 1 at his position
+        // If arr[mid] is 1, it's already in the correct position, move mid forward
         else if (arr[mid] == 1) 
         {
             mid++; 
         }
 
-        // Set 2 at his position
+        // If arr[mid] is 2, swap it with arr[high] and move high pointer backward
         else // arr[mid] == 2
         {
             swap(arr[mid], arr[high]);
@@ -54,3 +54,18 @@ int main()
 
     return 0;
 }
+
+/*
+    Here, mid is the main pointer that traverses the array and processes each element
+
+    It decides what action to take based on whether the element is 0, 1, or 2.
+
+|+--------+------------------------------------------------------------+ 
+| Pointer | Purpose                                                    | 
+|+--------+------------------------------------------------------------+ 
+|  low    | Marks boundary for `0s`, moves right when a `0` is placed. | 
+|  mid    | Main pointer, processes each element and moves forward.    | 
+|  high   | Marks boundary for `2s`, moves left when a `2` is placed.  | 
+|+--------+------------------------------------------------------------+ 
+
+*/

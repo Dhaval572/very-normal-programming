@@ -17,7 +17,7 @@ void loding()
 			printf("-");
 
 		// (i + 1) * 10 for increase % by 10%
-		printf("] %d%%", (i + 1) * 10);
+		printf("] %d%%", (i + 1) * 10); // Note: %% is used to display '%' symbol
 	}
 }
 

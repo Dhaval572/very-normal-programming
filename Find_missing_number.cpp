@@ -31,13 +31,34 @@ int findMissingNumber2(int *arr, int n)
     return xor1 ^ xor2;
 }
 
+// Using binary search if elements are sorted ( Time complexity O(n log(n)) )
+int findMissingNumber3(int arr[], int n)
+{
+    int left = 0, right = n - 1;
+
+    while (left < right)
+    {
+        int mid = left + (right - left) / 2;
+
+        // Check if the missing number is on the left side
+        if (arr[mid] != mid + 1)
+            right = mid;
+        else
+            left = mid + 1;
+    }
+
+    // The missing number is at index 'left'
+    return left + 1;
+}
+
 int main()
 {
     int arr[] = {1, 2, 4, 5, 6};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    cout << "func1 Missing number: " << findMissingNumber1(arr, size) << endl;
-    cout << "func2 Missing number: " << findMissingNumber2(arr, size) << endl;
+    cout << "( func1 ) Missing number: " << findMissingNumber1(arr, size) << endl;
+    cout << "( func2 ) Missing number: " << findMissingNumber2(arr, size) << endl;
+    cout << "( func3 ) Missing number: " << findMissingNumber3(arr, size) << endl;
 
     return 0;
 }

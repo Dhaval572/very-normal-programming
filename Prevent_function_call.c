@@ -1,7 +1,7 @@
 // Prevent the function call 
 #include <stdio.h>
 #pragma GCC poison printf
-// ( Note: also works in main function ) 
+// ( Note: also works for main function ) 
 
 void main()
 {

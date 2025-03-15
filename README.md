@@ -1,9 +1,9 @@
-Hello guys, How are you!
+Hello, everyone! How are you?
 
-I hope you all have fun
+I hope you're all having fun.
 
-So, you can see that the repository name is explaining that why i made this repository
+As you can see, the repository name explains why I created this repository.
 
-So, if you are beginner level c / c++ programmer than it will become usefull for you if not than ... 😁😁
+If you are a beginner-level C/C++ programmer, this will be useful for you. If not, then... 😁😁
 
-So, i hope you are interested in coding and also in gaming😁
+I hope you're interested in both coding and gaming! 😁

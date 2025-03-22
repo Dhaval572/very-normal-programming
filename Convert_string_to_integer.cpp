@@ -1,45 +1,54 @@
+// Convert string to integer
 #include <iostream>
-#include <climits>  // For INT_MAX and INT_MIN
+#include <climits> 
+#include <cctype>  
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    int myAtoi(string s) {
+    int myAtoi(const string &s)
+    {
         int i = 0, n = s.size();
         long result = 0;
         bool isNegative = false;
 
-        while (i < n && s[i] == ' ') {
+        // Ignore leading whitespace using std::isspace
+        while (i < n && isspace(s[i]))
             i++;
-        }
 
-        if (i < n && (s[i] == '+' || s[i] == '-')) {
+        // Check for sign
+        if (i < n && (s[i] == '+' || s[i] == '-'))
+        {
             isNegative = (s[i] == '-');
             i++;
         }
 
-        while (i < n && isdigit(s[i])) {
+        // Convert digits efficiently
+        while (i < n && isdigit(s[i]))
+        {
             result = result * 10 + (s[i] - '0');
-            i++;
 
-            if (!isNegative && result > INT_MAX) return INT_MAX;
-            if (isNegative && -result < INT_MIN) return INT_MIN;
+            if (!isNegative && result > INT_MAX)
+                return INT_MAX;
+            if (isNegative && -result < INT_MIN)
+                return INT_MIN;
+            i++;
         }
 
         return isNegative ? -result : result;
     }
 };
 
-int main() {
+int main()
+{
     Solution solution;
     string s;
 
     cout << "Enter a string: ";
     getline(cin, s);
 
-    int result = solution.myAtoi(s);
-    cout << "Converted Integer: " << result << endl;
-
+    cout << "Converted Integer: " << solution.myAtoi(s) << endl;
     return 0;
 }
